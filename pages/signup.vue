@@ -1,7 +1,7 @@
 <template>
   <div id="request-a-demo">
     <div class="wrapper">
-      <div class="first-row">
+      <div class="light-grey-row">
         <h1>Request a Demo</h1>
         <p>Fill in your details and we will contact you to schedule a demo</p>
       </div>
@@ -120,14 +120,6 @@ export default {
 </script>
 
 <style scoped>
-.wrapper .first-row {
-  background-color: #f6f6f6;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-}
-
 .wrapper .second-row {
     margin-bottom: 2rem;
 }

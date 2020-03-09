@@ -1,7 +1,7 @@
 <template>
   <div id="contact-us">
     <div class="wrapper">
-      <div class="first-row">
+      <div class="light-grey-row">
         <h1>Contact Us</h1>
         <p>Contact Mobiz by filling out our contact form or using the information below</p>
       </div>
@@ -143,14 +143,6 @@ export default {
 </script>
 
 <style scoped>
-.wrapper .first-row {
-  background-color: #f6f6f6;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-}
-
 .wrapper .second-row {
   margin-bottom: 2rem;
 }

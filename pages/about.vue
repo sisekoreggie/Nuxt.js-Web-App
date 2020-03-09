@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <div class="first-row">
+    <div class="light-grey-row">
       <h1>About Mobiz</h1>
       <p>Connecting brands and people where it matters</p>
     </div>
@@ -119,14 +119,6 @@ export default {
 </script>
 
 <style scoped>
-.first-row {
-  background-color: #f6f6f6;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-}
-
 .second-row {
   text-align: center;
   max-width: 70%;
