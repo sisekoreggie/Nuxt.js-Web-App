@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div class="home">
+    <Header />
     <div>
       <logo />
       <h1 class="title">
@@ -25,25 +26,18 @@
 </template>
 
 <script>
+import Header from '~/components/header.vue'
 import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Header
   }
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
