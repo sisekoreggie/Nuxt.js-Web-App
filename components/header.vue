@@ -2,7 +2,7 @@
   <div id="header">
     <div>
       <b-navbar type="dark" variant="dark">
-        <b-navbar-brand href="#">
+        <b-navbar-brand href="/">
           <img src="../assets/mobiz_logo_black.png" />
         </b-navbar-brand>
         <b-navbar-nav class="ml-auto">

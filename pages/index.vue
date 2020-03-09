@@ -21,15 +21,18 @@
         </a>
       </div>
     </div>
+    <GetInTouch />
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import GetInTouch from '~/components/getInTouch.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    GetInTouch
   }
 }
 </script>
