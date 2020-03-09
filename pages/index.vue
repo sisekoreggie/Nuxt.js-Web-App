@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Header />
     <div>
       <logo />
       <h1 class="title">
@@ -26,13 +25,11 @@
 </template>
 
 <script>
-import Header from '~/components/header.vue'
 import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
-    Logo,
-    Header
+    Logo
   }
 }
 </script>
