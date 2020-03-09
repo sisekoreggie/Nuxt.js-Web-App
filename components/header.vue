@@ -8,17 +8,17 @@
         <b-navbar-nav class="ml-auto">
           <!-- Navbar dropdowns -->
           <b-nav-item-dropdown text="Solutions" right>
-            <b-dropdown-item href="#">
+            <b-dropdown-item href="/smartsms">
               <img src="../assets/smartsms_logo.png" class="dropdown-image" />
             </b-dropdown-item>
-            <b-dropdown-item href="#">
+            <b-dropdown-item href="/smartstmt">
               <img src="../assets/smartstatement_logo.png" class="dropdown-image" />
             </b-dropdown-item>
           </b-nav-item-dropdown>
 
-          <b-nav-item href="#">About</b-nav-item>
-          <b-nav-item href="#">Contact</b-nav-item>
-          <b-nav-item href="#">Blog</b-nav-item>
+          <b-nav-item href="/about">About</b-nav-item>
+          <b-nav-item href="/contact">Contact</b-nav-item>
+          <b-nav-item href="/blog">Blog</b-nav-item>
           <b-nav-item id="login-button" href="#">Login</b-nav-item>
           <b-nav-item id="demo-request-button" href="/signup">Request A Demo</b-nav-item>
         </b-navbar-nav>
