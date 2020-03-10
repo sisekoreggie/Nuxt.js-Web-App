@@ -8,12 +8,18 @@
       <b-container class="second-row">
         <b-row>
           <b-col>
-            <b-form id="request-demo-form">
+            <b-form id="request-demo-form" @submit.prevent="sendContactEmail">
               <b-form-group id="input-group-1">
                 <b-container>
                   <b-row>
                     <b-col>
-                      <b-form-input id="input-1" type="text" required placeholder="Full Name"></b-form-input>
+                      <b-form-input
+                        id="input-1"
+                        v-model="formData.fullName"
+                        type="text"
+                        required
+                        placeholder="Full Name"
+                      ></b-form-input>
                     </b-col>
                   </b-row>
                 </b-container>
@@ -23,10 +29,22 @@
                 <b-container>
                   <b-row>
                     <b-col>
-                      <b-form-input id="input-3" type="text" required placeholder="Phone Number"></b-form-input>
+                      <b-form-input
+                        id="input-3"
+                        v-model="formData.phoneNumber"
+                        type="text"
+                        required
+                        placeholder="Phone Number"
+                      ></b-form-input>
                     </b-col>
                     <b-col>
-                      <b-form-input id="input-2" type="email" required placeholder="Email Address"></b-form-input>
+                      <b-form-input
+                        id="input-2"
+                        v-model="formData.emailAddress"
+                        type="email"
+                        required
+                        placeholder="Email Address"
+                      ></b-form-input>
                     </b-col>
                   </b-row>
                 </b-container>
@@ -36,11 +54,18 @@
                 <b-container>
                   <b-row>
                     <b-col>
-                      <b-form-input id="input-4" type="text" required placeholder="Company Name"></b-form-input>
+                      <b-form-input
+                        id="input-4"
+                        v-model="formData.companyName"
+                        type="text"
+                        required
+                        placeholder="Company Name"
+                      ></b-form-input>
                     </b-col>
                     <b-col>
                       <b-form-select
                         id="input-6"
+                        v-model="formData.reasonForMessage"
                         placeholder="Reason for message"
                         :options="customerSize"
                         required
@@ -54,7 +79,13 @@
                 <b-container>
                   <b-row>
                     <b-col>
-                      <b-form-textarea id="input-2" type="text" required placeholder="Comment"></b-form-textarea>
+                      <b-form-textarea
+                        id="input-2"
+                        v-model="formData.message"
+                        type="text"
+                        required
+                        placeholder="Comment"
+                      ></b-form-textarea>
                     </b-col>
                   </b-row>
                 </b-container>
@@ -64,7 +95,10 @@
                 <b-container>
                   <b-row>
                     <b-col id="checkbox-field">
-                      <b-form-checkbox name="subscribe-to-newsletter">Subscribe to our newsletter</b-form-checkbox>
+                      <b-form-checkbox
+                        v-model="formData.subscribe"
+                        name="subscribe-to-newsletter"
+                      >Subscribe to our newsletter</b-form-checkbox>
                     </b-col>
                   </b-row>
                 </b-container>
@@ -128,6 +162,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'RequestADemo',
   data() {
@@ -138,7 +174,40 @@ export default {
         'Sales Enquiry',
         'Request Pricing',
         'Technical Support'
-      ]
+      ],
+      formData: {
+        fullName: '',
+        emailAddress: '',
+        phoneNumber: '',
+        companyName: '',
+        reasonForMessage: '',
+        message: '',
+        subscribe: false
+      }
+    }
+  },
+  methods: {
+    sendContactEmail() {
+      axios
+        .post('/api/email', {
+          to: 'siseko@mobiz.co.za',
+          from: 'sisekoreggieneti@gmail.com',
+          subject: 'Contact Form Submission',
+          bodyHtml: `
+            Name: ${this.formData.fullName} 
+            Email: ${this.formData.emailAddress} 
+            Phone: ${this.formData.phoneNumber} 
+            CompName: ${this.formData.companyName} 
+            ReasonForMessage: ${this.formData.reasonForMessage} 
+            Message: ${this.formData.message}
+          `
+        })
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     }
   },
   head() {

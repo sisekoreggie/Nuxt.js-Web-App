@@ -5,9 +5,9 @@
   "author": "Siseko",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "cross-env NODE_ENV=production node serv er/index.js",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
@@ -15,22 +15,26 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "@sendgrid/mail": "^6.5.4",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.6.1",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
     "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.1.2",
     "jest": "^24.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
     "vue-jest": "^4.0.0-0"
   }
 }
