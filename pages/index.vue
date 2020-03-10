@@ -37,6 +37,11 @@ export default {
   components: {
     Logo,
     GetInTouch
+  },
+  head () {
+    return {
+      title: process.env.BasePageTitle
+    }
   }
 }
 </script>

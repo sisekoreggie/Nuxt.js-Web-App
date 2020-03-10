@@ -183,6 +183,15 @@ export default {
   name: 'SmartSms',
   components: {
     GetInTouch
+  },
+  head () {
+    return {
+      title: `SmartSMS | ${process.env.BasePageTitle}`,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
   }
 }
 </script>

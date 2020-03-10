@@ -114,6 +114,11 @@ export default {
   name: 'About',
   components: {
     GetInTouch
+  },
+  head () {
+    return {
+      title: `About Us | ${process.env.BasePageTitle}`
+    }
   }
 }
 </script>

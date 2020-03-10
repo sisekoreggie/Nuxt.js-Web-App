@@ -59,5 +59,9 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  env: {
+    BasePageTitle: 'Customer Engagement | Mobiz South Africa'
   }
 }

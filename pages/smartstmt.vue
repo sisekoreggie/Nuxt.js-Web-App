@@ -43,6 +43,11 @@ export default {
   name: 'SmartStatement',
   components: {
     GetInTouch
+  },
+  head () {
+    return {
+      title: `SmartStatement | ${process.env.BasePageTitle}`
+    }
   }
 }
 </script>

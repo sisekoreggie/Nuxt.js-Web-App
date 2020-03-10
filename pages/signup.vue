@@ -115,6 +115,11 @@ export default {
         'More than 1 000 000'
       ]
     }
+  },
+  head () {
+    return {
+      title: `Sign Up | ${process.env.BasePageTitle}`
+    }
   }
 }
 </script>

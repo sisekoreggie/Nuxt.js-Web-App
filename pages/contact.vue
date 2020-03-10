@@ -138,6 +138,11 @@ export default {
         'Technical Support'
       ]
     }
+  },
+  head () {
+    return {
+      title: `Contact Us | ${process.env.BasePageTitle}`
+    }
   }
 }
 </script>
