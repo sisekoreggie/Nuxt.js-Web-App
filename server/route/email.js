@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const sgMail = require('@sendgrid/mail');
 const router = express.Router();
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.post("/email", (req, res) => {
     const { to, from, subject, bodyHtml } = req.body;
