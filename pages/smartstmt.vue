@@ -18,10 +18,10 @@
     <div class="light-grey-row">
       <b-container>
         <b-row>
-          <b-col class="first-row-image">
+          <b-col class="third-row-image">
             <img src="../assets/smartstmt/smartstatement-graphic.png" />
           </b-col>
-          <b-col class="first-row-text">
+          <b-col class="third-row-text">
             <h3>Cost Effective</h3>
             <p>By moving your invoices over to SMS and eliminating printed statements, your organisation can reduce its billing costs by as much as 94%.</p>
             <h3>Improved Collections</h3>
@@ -44,7 +44,7 @@ export default {
   components: {
     GetInTouch
   },
-  head () {
+  head() {
     return {
       title: `SmartStatement | ${process.env.BasePageTitle}`
     }
@@ -53,4 +53,24 @@ export default {
 </script>
 
 <style scoped>
+.first-row-text {
+  padding-top: 6rem;
+  padding-left: 8.5rem;
+  text-align: left;
+}
+.first-row-text img {
+  max-width: 13rem;
+}
+.first-row-image {
+  padding-top: 3rem;
+  padding-right: 8rem;
+}
+
+.third-row-image img {
+  width: 30rem;
+}
+.third-row-text {
+  padding-top: 5rem;
+  text-align: left;
+}
 </style>

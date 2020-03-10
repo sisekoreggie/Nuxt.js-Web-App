@@ -116,7 +116,7 @@ export default {
       ]
     }
   },
-  head () {
+  head() {
     return {
       title: `Sign Up | ${process.env.BasePageTitle}`
     }
@@ -126,7 +126,9 @@ export default {
 
 <style scoped>
 .wrapper .second-row {
-    margin-bottom: 2rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  margin-bottom: 2rem;
 }
 
 #request-demo-form input,
@@ -138,6 +140,6 @@ export default {
 }
 
 #request-demo-form #checkbox-field {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 </style>
