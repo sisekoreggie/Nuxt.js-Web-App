@@ -16,26 +16,15 @@
         </b-row>
       </b-container>
     </div>
-    <div>
-      <logo />
-      <h1 class="title">WebApp</h1>
-      <h2 class="subtitle">Clone of the Mobiz website using nuxt.js</h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
-    </div>
     <GetInTouch />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import GetInTouch from '~/components/getInTouch.vue'
 
 export default {
   components: {
-    Logo,
     GetInTouch
   },
   head () {
