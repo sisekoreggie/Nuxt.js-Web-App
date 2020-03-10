@@ -8,7 +8,7 @@
       <b-container class="second-row">
         <b-row>
           <b-col>
-            <b-form id="request-demo-form" @submit="onSubmit" @reset="onReset">
+            <b-form id="request-demo-form">
               <b-form-group id="input-group-1">
                 <b-container>
                   <b-row>
@@ -23,7 +23,7 @@
                 <b-container>
                   <b-row>
                     <b-col>
-                      <b-form-input id="input-3" type="phone" required placeholder="Phone Number"></b-form-input>
+                      <b-form-input id="input-3" type="text" required placeholder="Phone Number"></b-form-input>
                     </b-col>
                     <b-col>
                       <b-form-input id="input-2" type="email" required placeholder="Email Address"></b-form-input>
