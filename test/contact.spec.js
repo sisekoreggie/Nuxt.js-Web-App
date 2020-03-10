@@ -6,4 +6,9 @@ describe("Contact Us Page", () => {
         var wrapper = mount(Contact);
         expect(wrapper.isVueInstance()).toBeTruthy()
     });
+
+    test("is rendered", () => {
+        var wrapper = mount(Contact);
+        expect(wrapper.exists()).toBe(true)
+    });
 });
