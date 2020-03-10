@@ -173,12 +173,17 @@
         </b-row>
       </b-container>
     </div>
+    <GetInTouch />
   </div>
 </template>
 
 <script>
+import GetInTouch from '~/components/getInTouch.vue'
 export default {
-  name: 'SmartSms'
+  name: 'SmartSms',
+  components: {
+    GetInTouch
+  }
 }
 </script>
 
