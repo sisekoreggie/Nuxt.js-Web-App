@@ -38,10 +38,10 @@
         <b-row>
           <b-col>
             <div>
-              <button v-on:click="addNumbers" class="btn btn-primary mb-2">Add</button>
-              <button v-on:click="subtractNumbers" class="btn btn-primary mb-2">Subtract</button>
-              <button v-on:click="multiplyNumbers" class="btn btn-primary mb-2">Multiply</button>
-              <button v-on:click="divideNumbers" class="btn btn-primary mb-2">Divide</button>
+              <button v-on:click="addNumbers" class="btn btn-primary mb-2 add">Add</button>
+              <button v-on:click="subtractNumbers" class="btn btn-primary mb-2 sub">Subtract</button>
+              <button v-on:click="multiplyNumbers" class="btn btn-primary mb-2 mult">Multiply</button>
+              <button v-on:click="divideNumbers" class="btn btn-primary mb-2 div">Divide</button>
             </div>
           </b-col>
         </b-row>
