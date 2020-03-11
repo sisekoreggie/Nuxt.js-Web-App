@@ -3,6 +3,15 @@ import Calculations from '@/pages/calculations.vue';
 
 const wrapper = shallowMount(Calculations);
 
+const wrapperWithData = shallowMount(Calculations, {
+    data() {
+      return {
+        firstNumber: 5,
+        secondNumber: 5
+      }
+    }
+  })
+
 describe("Calculations Page", () => {
     test("is Vue Instance", () => {
         expect(wrapper.isVueInstance()).toBeTruthy();
@@ -40,5 +49,25 @@ describe("Calculations Page", () => {
         wrapper.setMethods({ divideNumbers });
         wrapper.find('button.div').trigger('click');
         expect(divideNumbers).toBeCalled();
+    });
+
+    test('check addNumber updates total value', () => {
+        wrapperWithData.find('button.add').trigger('click');
+        expect(wrapperWithData.vm.total).toBe(10);
+    });
+
+    test('check subtractNumber updates total value', () => {
+        wrapperWithData.find('button.sub').trigger('click');
+        expect(wrapperWithData.vm.total).toBe(0);
+    });
+
+    test('check multiplyNumber updates total value', () => {
+        wrapperWithData.find('button.mult').trigger('click');
+        expect(wrapperWithData.vm.total).toBe(25);
+    });
+
+    test('check divideNumber updates total value', () => {
+        wrapperWithData.find('button.div').trigger('click');
+        expect(wrapperWithData.vm.total).toBe(1);
     });
 });
