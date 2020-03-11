@@ -8,7 +8,7 @@
       <b-container class="second-row">
         <b-row>
           <b-col>
-            <b-form id="request-demo-form" @submit.prevent="sendContactEmail">
+            <form id="request-demo-form" @submit.prevent="sendContactEmail">
               <b-form-group id="input-group-1">
                 <b-container>
                   <b-row>
@@ -108,12 +108,12 @@
                 <b-container>
                   <b-row>
                     <b-col>
-                      <b-button type="submit" variant="primary">SEND MESSAGE</b-button>
+                      <button type="submit" variant="primary" class="btn btn-primary send">SEND MESSAGE</button>
                     </b-col>
                   </b-row>
                 </b-container>
               </b-form-goup>
-            </b-form>
+            </form>
           </b-col>
           <b-col>
             <p>+27 21 510 7911</p>
@@ -183,7 +183,8 @@ export default {
         reasonForMessage: '',
         message: '',
         subscribe: false
-      }
+      },
+      responseData: ''
     }
   },
   methods: {
@@ -203,7 +204,7 @@ export default {
           `
         })
         .then((response) => {
-          console.log(response)
+          this.responseData = response;
         })
         .catch((error) => {
           console.log(error)
