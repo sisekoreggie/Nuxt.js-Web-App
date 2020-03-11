@@ -1,9 +1,9 @@
 # WebApp
 
-> Clone of the Mobiz (https://www.mobiz.co.za/) website using nuxt.js and node.js for server
-> Built for desktop only
-> Unit testing done with Jest
->Integration testing done with
+> Clone of the Mobiz (https://www.mobiz.co.za/) website using nuxt.js and node.js for server.</br>
+> Built for desktop only.</br>
+> Unit testing done with Jest.</br>
+> Integration testing done with.</br>
 
 ## Build Setup
 
