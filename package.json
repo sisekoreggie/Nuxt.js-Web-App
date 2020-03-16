@@ -10,7 +10,9 @@
     "start": "cross-env NODE_ENV=production node serv er/index.js",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "ava": "ava \"**/*.test.js\"",
+    "jest": "jest \".*.spec.js\"",
+    "test": "jest \".*.spec.js\" && ava \"**/*.test.js\""
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -27,6 +29,7 @@
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
+    "ava": "^3.5.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "eslint": "^6.1.0",
