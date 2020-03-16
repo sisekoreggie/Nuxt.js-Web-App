@@ -1,6 +1,10 @@
 import { shallowMount } from '@vue/test-utils';
 import Contact from '@/pages/contact.vue';
 import axios from 'axios';
+import Vue from 'vue';
+
+Vue.config.ignoredElements = [/b-/];
+
 jest.mock('axios');
 
 var wrapper = shallowMount(Contact);

@@ -1,5 +1,8 @@
 import {shallowMount} from '@vue/test-utils';
 import About from '@/pages/about';
+import Vue from 'vue';
+
+Vue.config.ignoredElements = [/b-/];
 
 const wrapper = shallowMount(About);
 

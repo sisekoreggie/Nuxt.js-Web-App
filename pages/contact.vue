@@ -91,7 +91,7 @@
                 </b-container>
               </b-form-group>
 
-              <b-form-goup>
+              <b-form-group>
                 <b-container>
                   <b-row>
                     <b-col id="checkbox-field">
@@ -102,9 +102,9 @@
                     </b-col>
                   </b-row>
                 </b-container>
-              </b-form-goup>
+              </b-form-group>
 
-              <b-form-goup>
+              <b-form-group>
                 <b-container>
                   <b-row>
                     <b-col>
@@ -112,7 +112,7 @@
                     </b-col>
                   </b-row>
                 </b-container>
-              </b-form-goup>
+              </b-form-group>
             </form>
           </b-col>
           <b-col>

@@ -2,6 +2,10 @@ import Contact from '@/pages/contact.vue';
 import { mount } from '@vue/test-utils';
 import Header from '@/components/header.vue';
 import axios from 'axios';
+import Vue from 'vue';
+
+Vue.config.ignoredElements = [/b-/];
+
 jest.mock('axios');
 
 const headerWrapper = mount(Header);
