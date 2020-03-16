@@ -70,4 +70,8 @@ describe("Calculations Page", () => {
         wrapperWithData.find('button.div').trigger('click');
         expect(wrapperWithData.vm.total).toBe(1);
     });
+
+    test('add numbers together', () => {
+        expect(wrapper.vm.addNumbers(2,3)).toReturn(5);
+    });
 });

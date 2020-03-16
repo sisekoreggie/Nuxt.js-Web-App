@@ -16,8 +16,8 @@
             </b-dropdown-item>
           </b-nav-item-dropdown>
 
-          <b-nav-item href="/about">About</b-nav-item>
-          <b-nav-item href="/contact">Contact</b-nav-item>
+          <b-nav-item id="about" href="/about">About</b-nav-item>
+          <b-nav-item id="contact" href="/contact">Contact</b-nav-item>
           <b-nav-item href="/calculations">Calculations</b-nav-item>
           <b-nav-item id="login-button" href="#">Login</b-nav-item>
           <b-nav-item id="demo-request-button" href="/signup">Request A Demo</b-nav-item>
