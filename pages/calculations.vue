@@ -42,6 +42,7 @@
               <button v-on:click="subtractNumbers" class="btn btn-primary mb-2 sub">Subtract</button>
               <button v-on:click="multiplyNumbers" class="btn btn-primary mb-2 mult">Multiply</button>
               <button v-on:click="divideNumbers" class="btn btn-primary mb-2 div">Divide</button>
+              <button v-on:click="increment" class="btn btn-primary mb-2 div">Increment: {{ this.$store.state.count }}</button>
             </div>
           </b-col>
         </b-row>
@@ -56,6 +57,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'Calculations',
   data() {
@@ -70,6 +73,7 @@ export default {
       title: `Calculations | ${process.env.BasePageTitle}`
     }
   },
+  computed: mapState(['counter']),
   methods: {
     addNumbers() {
       this.total = parseInt(this.firstNumber) + parseInt(this.secondNumber)
@@ -86,6 +90,9 @@ export default {
     divideNumbers() {
       this.total = parseInt(this.firstNumber) / parseInt(this.secondNumber)
       return this.total
+    },
+    increment() {
+      this.$store.commit("increment");
     }
   }
 }
