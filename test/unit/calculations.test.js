@@ -9,3 +9,7 @@ const wrapper = shallowMount(Calculations);
 test("passing test", t => {
 	t.pass();
 });
+
+test("it renders", t => {
+	t.false(wrapper.isEmpty());
+});
