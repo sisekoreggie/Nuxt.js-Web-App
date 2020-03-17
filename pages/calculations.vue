@@ -42,13 +42,16 @@
               <button v-on:click="subtractNumbers" class="btn btn-primary mb-2 sub">Subtract</button>
               <button v-on:click="multiplyNumbers" class="btn btn-primary mb-2 mult">Multiply</button>
               <button v-on:click="divideNumbers" class="btn btn-primary mb-2 div">Divide</button>
-              <button v-on:click="increment" class="btn btn-primary mb-2 div">Increment: {{ this.$store.state.count }}</button>
+              <button
+                v-on:click="increment"
+                class="btn btn-primary mb-2 div"
+              >Increment: {{ this.$store.state.count }}</button>
             </div>
           </b-col>
         </b-row>
         <b-row>
           <b-col>
-            <p>Total: {{this.total}}</p>
+            <p>Total: {{this.$store.state.total}}</p>
           </b-col>
         </b-row>
       </b-container>
@@ -57,15 +60,14 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from 'vuex'
 
 export default {
   name: 'Calculations',
   data() {
     return {
       firstNumber: 0,
-      secondNumber: 0,
-      total: 0
+      secondNumber: 0
     }
   },
   head() {
@@ -76,23 +78,23 @@ export default {
   computed: mapState(['counter']),
   methods: {
     addNumbers() {
-      this.total = parseInt(this.firstNumber) + parseInt(this.secondNumber)
-      return this.total
+      const total = parseInt(this.firstNumber) + parseInt(this.secondNumber)
+      this.$store.commit('setTotal', total)
     },
     subtractNumbers() {
-      this.total = parseInt(this.firstNumber) - parseInt(this.secondNumber)
-      return this.total
+      const total = parseInt(this.firstNumber) - parseInt(this.secondNumber)
+      this.$store.commit('setTotal', total)
     },
     multiplyNumbers() {
-      this.total = parseInt(this.firstNumber) * parseInt(this.secondNumber)
-      return this.total
+      const total = parseInt(this.firstNumber) * parseInt(this.secondNumber)
+      this.$store.commit('setTotal', total)
     },
     divideNumbers() {
-      this.total = parseInt(this.firstNumber) / parseInt(this.secondNumber)
-      return this.total
+      const total = parseInt(this.firstNumber) / parseInt(this.secondNumber)
+      this.$store.commit('setTotal', total)
     },
     increment() {
-      this.$store.commit("increment");
+      this.$store.commit('increment')
     }
   }
 }
